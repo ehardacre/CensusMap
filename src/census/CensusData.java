@@ -27,4 +27,8 @@ public class CensusData {
 		CensusGroup g = new CensusGroup(population,latitude,longitude); 
 		data[data_size++] = g;
 	}
+	
+	public CensusGroup[] getAllData(){
+		return data;
+	}
 }

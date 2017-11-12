@@ -8,6 +8,7 @@ package census;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class PopulationQuery {
 	// next four constants are relevant to parsing
@@ -62,9 +63,19 @@ public class PopulationQuery {
 	// argument 1: size of the grid
 	// argument 2: -v1, -v2, -v3, -v4, or -v5
 	public static void main(String[] args) {
-		// TODO: Get rid of these lines after you use them for testing.
-		System.out.println("arg0: " + args[0]);
-		System.out.println("arg1: " + args[1]);
-		System.out.println("arg2: " + args[2]);
+		String file = args[0];
+		int gridSize = Integer.parseInt(args[1]);
+		VersionInterface search; 
+		CensusData data = parse(file);
+		switch (args[2]) {
+		case "-v1":
+			search = new SequentialSearch(data);
+		case "-v2":
+			//version = 2;
+		case "-v3":
+			//version = 3;
+		}
+		
+		
 	}
 }
